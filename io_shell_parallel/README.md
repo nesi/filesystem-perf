@@ -9,3 +9,5 @@ Key points:
 
 - It uses MPI for parallel I/O tests, which is similar to how IOR operates.
 - The script tests both read and write operations for serial and parallel scenarios.
+
+![image](./images/io_performance.png)
