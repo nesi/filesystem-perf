@@ -1,8 +1,0 @@
-#!/bin/bash
-
-j1=$(sbatch -D /nesi/nobackup/nesi99999/gsou008/ior --dependency=singleton -p milan -N 1 benchmark.sl)
-j2=$(sbatch -D /nesi/nobackup/nesi99999/gsou008/ior -p milan --dependency=singleton -N 2 benchmark.sl)
-j2=$(sbatch -D /nesi/nobackup/nesi99999/gsou008/ior -p milan --dependency=singleton -N 16 benchmark.sl)
-j3=$(sbatch -D /nesi/nobackup/nesi99999/gsou008/ior --dependency=singleton -N 1 benchmark.sl)
-j4=$(sbatch -D /nesi/nobackup/nesi99999/gsou008/ior --dependency=singleton -N 2 benchmark.sl)
-j4=$(sbatch -D /nesi/nobackup/nesi99999/gsou008/ior --dependency=singleton -N 16 benchmark.sl)
