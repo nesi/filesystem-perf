@@ -7,12 +7,11 @@
 #SBATCH --cpus-per-task=16  # Adjust based on your max thread count
 
 module purge
-module use /home/dsen018/easybuildinstall/modules/all/
+module use ~/modules/all/
 module load fio
 module load libaio/0.3.113-GCCcore-12.3.0
 # Load necessary modules (adjust for your system)
 
-export LD_LIBRARY_PATH=/home/dsen018/easybuildinstall/software/libaio/0.3.113-GCCcore-12.3.0/lib:$LD_LIBRARY_PATH
 
 # Configuration
 TEST_DIR="${PWD}/testdir"
