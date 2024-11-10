@@ -46,7 +46,7 @@ run_fio_test() {
     echo "Test: $test_type | Block Size: $bs | Threads: $threads" | tee -a $OUTPUT_DIR/summary.txt
     echo "===========================================" | tee -a $OUTPUT_DIR/summary.txt
     
-    # Run fio command as a single line without backslashes
+    # Run fio command 
     fio --name=gpfs_test --directory=$TEST_DIR --size=$FILE_SIZE --time_based --runtime=$TEST_DURATION --ioengine=psync --direct=1 --verify=0 --bs=$bs --rw=$test_type --numjobs=$threads --group_reporting --filename_format="f.\$jobnum.dat" --output-format=json --output="$result_file"
 
     # Check if the test ran successfully
